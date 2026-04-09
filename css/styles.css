@@ -14,12 +14,12 @@ header {
   padding: 25px;
 }
 
-#main-header {
+.main-header {
   color: lightgrey;
   font-size: 58px;
 }
 
-#subheader {
+.subheader {
   color: lightgrey;
   font-size: 25px;
 }
