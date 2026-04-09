@@ -3,6 +3,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
 }
 
 header {
@@ -19,4 +20,9 @@ header {
 #subheader {
   color: lightgrey;
   font-size: 25px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
 }
