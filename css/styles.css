@@ -1,5 +1,8 @@
 body {
-  background-color: #df3000;
+  background-image: url("images/BackgrounfFire.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 header {
