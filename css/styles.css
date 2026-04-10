@@ -23,3 +23,9 @@ header {
   color: lightgrey;
   font-size: 25px;
 }
+
+.img-card img {
+  display: block;
+  margin: 0 auto;
+  height: 20px;
+}
