@@ -90,12 +90,6 @@ body, html {
       border-radius: 8px;
     }
 
-    /* Optional hover effect */
-    .card:hover {
-      transform: scale(1.05);
-      transition: 0.2s;
-    }
-
     /* Mobile fix */
     @media (max-width: 800px) {
       .grid-container {
