@@ -31,19 +31,12 @@ header {
 /* Layout */
 .layout {
   display: flex;
-  height: calc(100vh - 140px);
-  main
-  main
 }
 
 /* Sidebar */
 .sidebar {
   width: 200px;
   height: 100vh;
-
-  height: 100%;
-  main
-
   background-color: rgba(0, 0, 0, 0.85);
   padding-top: 20px;
   position: sticky;
@@ -80,6 +73,7 @@ header {
   flex: 1;
   max-height: calc(100vh - 140px);
   overflow-y: auto;
+  align-items: start;
 }
 
 /* Cards */
@@ -106,4 +100,11 @@ header {
     grid-template-columns: 1fr;
     overflow-y: visible;
   }
+}
+
+
+.card p {
+  color: lightgrey;
+  margin: 10px 0 0;
+  line-height: 1.4;
 }
