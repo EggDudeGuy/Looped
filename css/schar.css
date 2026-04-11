@@ -67,11 +67,12 @@ header {
 /* Grid */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(5, minmax(240px, 240px));
+  grid-template-columns: repeat(5, minmax(170px, 1fr));
   gap: 20px;
   padding: 20px;
   flex: 1;
-  overflow-x: auto;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
 }
 
 /* Cards */
@@ -96,6 +97,6 @@ header {
 @media (max-width: 800px) {
   .grid-container {
     grid-template-columns: 1fr;
-    overflow-x: visible;
+    overflow-y: visible;
   }
 }
