@@ -325,5 +325,31 @@ pothead and she sees the survivors as barriers to his goal.</p>
 
   </div>
 
+  <script>
+    (function () {
+      const grid = document.querySelector('.grid-container');
+      if (!grid) return;
+
+      function layoutCards() {
+        const styles = window.getComputedStyle(grid);
+        const rowHeight = parseFloat(styles.gridAutoRows) || 10;
+        const rowGap = parseFloat(styles.rowGap) || 0;
+
+        grid.querySelectorAll('.card').forEach((card) => {
+          const loreText = card.querySelector('p')?.innerText || '';
+          card.classList.toggle('card-wide', loreText.length > 220);
+
+          const cardHeight = card.getBoundingClientRect().height;
+          const rowSpan = Math.ceil((cardHeight + rowGap) / (rowHeight + rowGap));
+          card.style.gridRowEnd = `span ${rowSpan}`;
+        });
+      }
+
+      window.addEventListener('load', layoutCards);
+      window.addEventListener('resize', layoutCards);
+      layoutCards();
+    })();
+  </script>
+
 </body>
 </html>
