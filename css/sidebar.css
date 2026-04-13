@@ -22,7 +22,7 @@
   margin: 10px 0;
 }
 
-.sidebar a {
+.sidebar a, p {
   color: lightgrey;
   text-decoration: none;
   display: block;
