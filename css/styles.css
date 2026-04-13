@@ -29,45 +29,6 @@ header {
   justify-content: center;
 }
 
-/* Layout container */
-.layout {
-  display: flex;
-}
-
-/* Sidebar */
-.sidebar {
-  width: 200px;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.85);
-  padding-top: 20px;
-  position: sticky;
-  top: 0;
-}
-
-/* Remove default list styling */
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Each link */
-.sidebar li {
-  margin: 10px 0;
-}
-
-/* Link styling */
-.sidebar a {
-  color: lightgrey;
-  text-decoration: none;
-  display: block;
-  padding: 10px 20px;
-}
-
-/* Hover effect */
-.sidebar a:hover {
-  background-color: #333;
-}
 
 /* Main content */
 main {

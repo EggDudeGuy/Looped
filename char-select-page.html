@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Looped Characters</title>
   <link rel="stylesheet" href="css/schar.css">
+  <link rel="stylesheet" href="css/sidebar.css">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
     <!-- Sidebar -->
     <nav class="sidebar">
       <ul>
-        <li><a href="https://eggdudeguy.github.io/Looped/">Home</a></li>
+        <li><a href="index.html">Home</a></li>
       </ul>
     </nav>
 
@@ -28,22 +29,81 @@
 
       <div class="card">
         <h3>Character 1</h3>
-        <img src="images/char1.png" alt="Character 1">
+        <img src="images/LoopedLogo.png" alt="Character 1">
+        <p>Plac Holdr</p>
       </div>
 
       <div class="card">
         <h3>Character 2</h3>
-        <img src="images/char2.png" alt="Character 2">
+        <img src="images/LoopedLogo.png" alt="Character 2">
+        <p>Plac Holdr</p>
       </div>
 
       <div class="card">
         <h3>Character 3</h3>
-        <img src="images/char3.png" alt="Character 3">
+        <img src="images/LoopedLogo.png" alt="Character 3">
+        <p>Plac Holdr</p>
+      </div>
+
+      <div class="card">
+        <h3>Character 4</h3>
+        <img src="images/LoopedLogo.png" alt="Character 4">
+        <p>Plac Holdr</p>
+      </div>
+
+      <div class="card">
+        <h3>Character 5</h3>
+        <img src="images/LoopedLogo.png" alt="Character 5">
+        <p>Plac Holdr</p>
+      </div>
+
+      <div class="card">
+        <h3>Character 6</h3>
+        <img src="images/LoopedLogo.png" alt="Character 6">
+        <p>Plac Holdr</p>
+      </div>
+
+      <div class="card">
+        <h3>Character 7</h3>
+        <img src="images/LoopedLogo.png" alt="Character 7">
+        <p>Plac Holdr</p>
+      </div>
+
+      <div class="card">
+        <h3>Character 8</h3>
+        <img src="images/LoopedLogo.png" alt="Character 8">
+        <p>Plac Holdr</p>
       </div>
 
     </main>
 
   </div>
+
+  <script>
+    (function () {
+      const grid = document.querySelector('.grid-container');
+      if (!grid) return;
+
+      function layoutCards() {
+        const styles = window.getComputedStyle(grid);
+        const rowHeight = parseFloat(styles.gridAutoRows) || 10;
+        const rowGap = parseFloat(styles.rowGap) || 0;
+
+        grid.querySelectorAll('.card').forEach((card) => {
+          const loreText = card.querySelector('p')?.innerText || '';
+          card.classList.toggle('card-wide', loreText.length > 220);
+
+          const cardHeight = card.getBoundingClientRect().height;
+          const rowSpan = Math.ceil((cardHeight + rowGap) / (rowHeight + rowGap));
+          card.style.gridRowEnd = `span ${rowSpan}`;
+        });
+      }
+
+      window.addEventListener('load', layoutCards);
+      window.addEventListener('resize', layoutCards);
+      layoutCards();
+    })();
+  </script>
 
 </body>
 </html>
