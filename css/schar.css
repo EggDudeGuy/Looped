@@ -28,18 +28,52 @@ header {
   margin: 0;
 }
 
+/* Layout */
+.layout {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding-top: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  color: lightgrey;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+}
+
+.sidebar a:hover {
+  background-color: #333;
+}
 
 /* Grid */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-auto-rows: 10px;
-  grid-auto-flow: dense;
+  grid-template-columns: repeat(5, minmax(170px, 1fr));
   gap: 20px;
   padding: 20px;
   flex: 1;
   max-height: calc(100vh - 140px);
   overflow-y: auto;
+  align-items: start;
 }
 
 /* Cards */
@@ -48,11 +82,6 @@ header {
   padding: 10px;
   text-align: center;
   border-radius: 10px;
-  grid-column: span 1;
-}
-
-.card.card-wide {
-  grid-column: span 2;
 }
 
 .card h3 {
@@ -65,23 +94,17 @@ header {
   border-radius: 8px;
 }
 
-.card p {
-  color: lightgrey;
-  margin: 10px 0 0;
-  line-height: 1.4;
-}
-
 /* Mobile fix */
 @media (max-width: 800px) {
   .grid-container {
     grid-template-columns: 1fr;
     overflow-y: visible;
-    grid-auto-rows: auto;
   }
+}
 
-  .card,
-  .card.card-wide {
-    grid-column: span 1;
-    grid-row-end: auto !important;
-  }
+
+.card p {
+  color: lightgrey;
+  margin: 10px 0 0;
+  line-height: 1.4;
 }
